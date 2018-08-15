@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		5A55F36C2123E12700BE8B67 /* InfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F36A2123E12700BE8B67 /* InfoPageViewController.swift */; };
 		5A55F36D2123E12700BE8B67 /* InfoPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F36B2123E12700BE8B67 /* InfoPageViewController.xib */; };
-		5A55F36F21241A2100BE8B67 /* infoPage1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F36E21241A2100BE8B67 /* infoPage1.xib */; };
-		5A55F37121241A2A00BE8B67 /* infoPage2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F37021241A2A00BE8B67 /* infoPage2.xib */; };
-		5A55F37321241A3300BE8B67 /* infoPage3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F37221241A3300BE8B67 /* infoPage3.xib */; };
+		5A55F376212447FD00BE8B67 /* InfoPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F374212447FD00BE8B67 /* InfoPage1.swift */; };
+		5A55F377212447FD00BE8B67 /* InfoPage1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F375212447FD00BE8B67 /* InfoPage1.xib */; };
+		5A55F37A2124481C00BE8B67 /* InfoPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F3782124481C00BE8B67 /* InfoPage2.swift */; };
+		5A55F37B2124481C00BE8B67 /* InfoPage2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F3792124481C00BE8B67 /* InfoPage2.xib */; };
+		5A55F37E2124483200BE8B67 /* InfoPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F37C2124483200BE8B67 /* InfoPage3.swift */; };
+		5A55F37F2124483200BE8B67 /* InfoPage3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F37D2124483200BE8B67 /* InfoPage3.xib */; };
 		E0738A682122E93800973C37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0738A672122E93800973C37 /* AppDelegate.swift */; };
 		E0738A702122E93800973C37 /* ARganize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0738A6E2122E93800973C37 /* ARganize.xcdatamodeld */; };
 		E0738A722122E93900973C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0738A712122E93900973C37 /* Assets.xcassets */; };
@@ -26,9 +29,12 @@
 /* Begin PBXFileReference section */
 		5A55F36A2123E12700BE8B67 /* InfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageViewController.swift; sourceTree = "<group>"; };
 		5A55F36B2123E12700BE8B67 /* InfoPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPageViewController.xib; sourceTree = "<group>"; };
-		5A55F36E21241A2100BE8B67 /* infoPage1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = infoPage1.xib; sourceTree = "<group>"; };
-		5A55F37021241A2A00BE8B67 /* infoPage2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = infoPage2.xib; sourceTree = "<group>"; };
-		5A55F37221241A3300BE8B67 /* infoPage3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = infoPage3.xib; sourceTree = "<group>"; };
+		5A55F374212447FD00BE8B67 /* InfoPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPage1.swift; sourceTree = "<group>"; };
+		5A55F375212447FD00BE8B67 /* InfoPage1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPage1.xib; sourceTree = "<group>"; };
+		5A55F3782124481C00BE8B67 /* InfoPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPage2.swift; sourceTree = "<group>"; };
+		5A55F3792124481C00BE8B67 /* InfoPage2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPage2.xib; sourceTree = "<group>"; };
+		5A55F37C2124483200BE8B67 /* InfoPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPage3.swift; sourceTree = "<group>"; };
+		5A55F37D2124483200BE8B67 /* InfoPage3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPage3.xib; sourceTree = "<group>"; };
 		E0738A642122E93800973C37 /* ARganize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARganize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0738A672122E93800973C37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0738A6F2122E93800973C37 /* ARganize.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ARganize.xcdatamodel; sourceTree = "<group>"; };
@@ -63,13 +69,13 @@
 		5A60460B2123D93100A93EAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A55F375212447FD00BE8B67 /* InfoPage1.xib */,
+				5A55F3792124481C00BE8B67 /* InfoPage2.xib */,
+				5A55F37D2124483200BE8B67 /* InfoPage3.xib */,
 				E0D03D6F21242AF20003DE06 /* MainARViewController.xib */,
 				E0738A7D2122E95500973C37 /* MainViewController.xib */,
 				5A55F36B2123E12700BE8B67 /* InfoPageViewController.xib */,
 				E0738A732122E93900973C37 /* LaunchScreen.storyboard */,
-				5A55F36E21241A2100BE8B67 /* infoPage1.xib */,
-				5A55F37021241A2A00BE8B67 /* infoPage2.xib */,
-				5A55F37221241A3300BE8B67 /* infoPage3.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -77,6 +83,9 @@
 		5A60460C2123D93600A93EAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5A55F374212447FD00BE8B67 /* InfoPage1.swift */,
+				5A55F3782124481C00BE8B67 /* InfoPage2.swift */,
+				5A55F37C2124483200BE8B67 /* InfoPage3.swift */,
 				E0738A7C2122E95500973C37 /* MainViewController.swift */,
 				5A55F36A2123E12700BE8B67 /* InfoPageViewController.swift */,
 				E0D03D6E21242AF20003DE06 /* MainARViewController.swift */,
@@ -174,14 +183,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0D03D7121242AF20003DE06 /* MainARViewController.xib in Resources */,
+				5A55F37F2124483200BE8B67 /* InfoPage3.xib in Resources */,
+				5A55F37B2124481C00BE8B67 /* InfoPage2.xib in Resources */,
+				5A55F377212447FD00BE8B67 /* InfoPage1.xib in Resources */,
 				E0D03D73212430320003DE06 /* ARassets.scnassets in Resources */,
 				E0738A752122E93900973C37 /* LaunchScreen.storyboard in Resources */,
 				E0738A7F2122E95500973C37 /* MainViewController.xib in Resources */,
 				E0738A722122E93900973C37 /* Assets.xcassets in Resources */,
-				5A55F36F21241A2100BE8B67 /* infoPage1.xib in Resources */,
 				5A55F36D2123E12700BE8B67 /* InfoPageViewController.xib in Resources */,
-				5A55F37321241A3300BE8B67 /* infoPage3.xib in Resources */,
-				5A55F37121241A2A00BE8B67 /* infoPage2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +205,9 @@
 				E0D03D7021242AF20003DE06 /* MainARViewController.swift in Sources */,
 				E0738A702122E93800973C37 /* ARganize.xcdatamodeld in Sources */,
 				E0738A682122E93800973C37 /* AppDelegate.swift in Sources */,
+				5A55F376212447FD00BE8B67 /* InfoPage1.swift in Sources */,
+				5A55F37A2124481C00BE8B67 /* InfoPage2.swift in Sources */,
+				5A55F37E2124483200BE8B67 /* InfoPage3.swift in Sources */,
 				5A55F36C2123E12700BE8B67 /* InfoPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
