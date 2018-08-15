@@ -18,6 +18,9 @@
 		E0738A752122E93900973C37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0738A732122E93900973C37 /* LaunchScreen.storyboard */; };
 		E0738A7E2122E95500973C37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0738A7C2122E95500973C37 /* MainViewController.swift */; };
 		E0738A7F2122E95500973C37 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0738A7D2122E95500973C37 /* MainViewController.xib */; };
+		E0D03D7021242AF20003DE06 /* MainARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D03D6E21242AF20003DE06 /* MainARViewController.swift */; };
+		E0D03D7121242AF20003DE06 /* MainARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D03D6F21242AF20003DE06 /* MainARViewController.xib */; };
+		E0D03D73212430320003DE06 /* ARassets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D03D72212430320003DE06 /* ARassets.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		E0738A762122E93900973C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0738A7C2122E95500973C37 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E0738A7D2122E95500973C37 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		E0D03D6E21242AF20003DE06 /* MainARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainARViewController.swift; path = ARganize/MainARViewController.swift; sourceTree = SOURCE_ROOT; };
+		E0D03D6F21242AF20003DE06 /* MainARViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainARViewController.xib; path = ARganize/View/MainARViewController.xib; sourceTree = SOURCE_ROOT; };
+		E0D03D72212430320003DE06 /* ARassets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ARassets.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +56,6 @@
 		5A60460A2123D92C00A93EAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E0738A672122E93800973C37 /* AppDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -58,6 +63,7 @@
 		5A60460B2123D93100A93EAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E0D03D6F21242AF20003DE06 /* MainARViewController.xib */,
 				E0738A7D2122E95500973C37 /* MainViewController.xib */,
 				5A55F36B2123E12700BE8B67 /* InfoPageViewController.xib */,
 				E0738A732122E93900973C37 /* LaunchScreen.storyboard */,
@@ -73,6 +79,7 @@
 			children = (
 				E0738A7C2122E95500973C37 /* MainViewController.swift */,
 				5A55F36A2123E12700BE8B67 /* InfoPageViewController.swift */,
+				E0D03D6E21242AF20003DE06 /* MainARViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -100,8 +107,10 @@
 				5A60460B2123D93100A93EAD /* View */,
 				5A60460A2123D92C00A93EAD /* Model */,
 				E0738A712122E93900973C37 /* Assets.xcassets */,
+				E0D03D72212430320003DE06 /* ARassets.scnassets */,
 				E0738A762122E93900973C37 /* Info.plist */,
 				E0738A6E2122E93800973C37 /* ARganize.xcdatamodeld */,
+				E0738A672122E93800973C37 /* AppDelegate.swift */,
 			);
 			path = ARganize;
 			sourceTree = "<group>";
@@ -164,6 +173,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D03D7121242AF20003DE06 /* MainARViewController.xib in Resources */,
+				E0D03D73212430320003DE06 /* ARassets.scnassets in Resources */,
 				E0738A752122E93900973C37 /* LaunchScreen.storyboard in Resources */,
 				E0738A7F2122E95500973C37 /* MainViewController.xib in Resources */,
 				E0738A722122E93900973C37 /* Assets.xcassets in Resources */,
@@ -182,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0738A7E2122E95500973C37 /* MainViewController.swift in Sources */,
+				E0D03D7021242AF20003DE06 /* MainARViewController.swift in Sources */,
 				E0738A702122E93800973C37 /* ARganize.xcdatamodeld in Sources */,
 				E0738A682122E93800973C37 /* AppDelegate.swift in Sources */,
 				5A55F36C2123E12700BE8B67 /* InfoPageViewController.swift in Sources */,
@@ -323,7 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HRQPZU9P7;
+				DEVELOPMENT_TEAM = BW6L62Q584;
 				INFOPLIST_FILE = ARganize/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,7 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HRQPZU9P7;
+				DEVELOPMENT_TEAM = BW6L62Q584;
 				INFOPLIST_FILE = ARganize/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

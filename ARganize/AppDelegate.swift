@@ -23,10 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         
         // Allocate memory for an instance of the 'MainViewController' class
-        let mainViewController = MainViewController()
+//        let mainViewController = MainViewController()
+        let arViewController = MainARViewController()
         
         // Set the root view controller of the app's window
-        window!.rootViewController = mainViewController
+//        window!.rootViewController = mainViewController
+        window!.rootViewController = arViewController
         
         // Make the window visible
         window!.makeKeyAndVisible()

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class InfoPageViewController: UIPageViewController,UIPageViewControllerDataSource {
+class InfoPageViewController: UIPageViewController {
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.dataSource = dataSource
+//        self.dataSource = dataSource
         // Do any additional setup after loading the view.
     }
 
