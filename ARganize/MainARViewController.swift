@@ -19,8 +19,6 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         
         sceneView.delegate = self
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,8 +31,13 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
         // Run the view's session
         sceneView.session.run(configuration)
     }
-
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        sceneView.session.pause()
+    }
+
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         if anchor is ARPlaneAnchor {
             let planeAnchor = anchor as! ARPlaneAnchor

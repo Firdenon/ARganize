@@ -23,16 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         
         // Allocate memory for an instance of the 'MainViewController' class
-//        let mainViewController = MainViewController()
-        //let arViewController = MainARViewController()
-        let pageViewController = InfoPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        //let mainViewController = MainViewController()
+        let arViewController = MainARViewController()
+        //let pageViewController = InfoPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
         
-//        InfoPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        //InfoPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
         
         // Set the root view controller of the app's window
-//        window!.rootViewController = mainViewController
-        //window!.rootViewController = arViewController
-        window!.rootViewController = pageViewController
+        //window!.rootViewController = mainViewController
+        window!.rootViewController = arViewController
+        //window!.rootViewController = pageViewController
         
         // Make the window visible
         window!.makeKeyAndVisible()
