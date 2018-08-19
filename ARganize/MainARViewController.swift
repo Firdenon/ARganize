@@ -105,6 +105,13 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
                     sceneView.scene.rootNode.addChildNode(node)
                     objectStepper.maximumValue = Double(listNode.count)
                     countLabel.text = String(objectStepper.value)
+                    let listObject = Object(context: PersistanceService.context)
+                    //conversi node dan box ke Binary Data
+                    //let convertNode = node as NSData?
+                    listObject.nama = "box\(listNode.count+1)"
+                    //Save Object ke CoreData
+                    //PersistanceService.saveContext()
+                    
                 }
             }
         }
