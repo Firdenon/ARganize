@@ -9,6 +9,8 @@
 import UIKit
 import SceneKit
 import ARKit
+import CoreData
+
 
 class MainARViewController: UIViewController, ARSCNViewDelegate{
 
