@@ -1,21 +1,21 @@
 //
-//  InfoPage3.swift
+//  SplashScreenViewController.swift
 //  ARganize
 //
-//  Created by Kristopher Chayadi on 15/08/18.
+//  Created by Kristopher Chayadi on 16/08/18.
 //  Copyright © 2018 MC3 RE:ceh. All rights reserved.
 //
 
 import UIKit
 
-class InfoPage3: UIViewController {
+class SplashScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
-
+    
 
     /*
     // MARK: - Navigation
