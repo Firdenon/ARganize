@@ -12,7 +12,6 @@ class InfoPageViewController: UIPageViewController,UIPageViewControllerDataSourc
 
     let pageContentViewControllers = [
         UIViewController(nibName: "InfoPage1", bundle: nil),
-        UIViewController(nibName: "InfoPage2", bundle: nil),
         UIViewController(nibName: "InfoPage3", bundle: nil)
     ]
     

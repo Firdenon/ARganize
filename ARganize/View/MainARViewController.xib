@@ -85,5 +85,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.40000000000001" y="153.69458128078819"/>
         </view>
+        <rotationGestureRecognizer id="JQX-kh-Y2x">
+            <connections>
+                <action selector="rotateNode:" destination="-1" id="gyF-1H-1gv"/>
+            </connections>
+        </rotationGestureRecognizer>
     </objects>
 </document>

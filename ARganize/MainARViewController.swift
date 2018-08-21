@@ -130,19 +130,43 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
         if flag == true { return } else {
             //get The Current Touch Point
             guard let currentTouchPoint = touches.first?.location(in: self.sceneView),
-                
+
             //get The Next Feature Point Etc
             let hitTest = sceneView.hitTest(currentTouchPoint, types: .existingPlane).first else { return }
-            
+
             //convert To World Coordinates
             let worldTransform = hitTest.worldTransform
-            
+
             //set The New Position
             let newPosition = SCNVector3(worldTransform.columns.3.x, worldTransform.columns.3.y, worldTransform.columns.3.z)
-            
+
             //apply To The Node
             listNode[Int(objectStepper.value)].position = newPosition
             //print(objectStepper.value)
+        }
+    }
+    
+    
+    @IBAction func rotateNode(_ sender: UIRotationGestureRecognizer) {
+        if flag == true { return } else {
+            
+            print("muter jalan")
+            
+            var currentAngleY = listNode[Int(objectStepper.value)].eulerAngles.y
+            
+            //1. Get The Current Rotation From The Gesture
+            let rotation = Float(sender.rotation)
+            
+            //2. If The Gesture State Has Changed Set The Nodes EulerAngles.y
+            if sender.state == .changed{
+                
+                listNode[Int(objectStepper.value)].eulerAngles.y = currentAngleY + rotation
+            }
+            
+            //3. If The Gesture Has Ended Store The Last Angle Of The Cube
+            if(sender.state == .ended) {
+                currentAngleY = listNode[Int(objectStepper.value)].eulerAngles.y
+            }
         }
     }
     
