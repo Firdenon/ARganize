@@ -25,6 +25,7 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
     
     @IBOutlet var view: UIView!
     
+    var vcDelegate :CreateObjectDelegate?
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -96,8 +97,9 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
         
         let newBaseObject = BaseObjectLibrary(node: node, box: box, nama: "Yattazo!")
         
-        MainARViewController.arrayOfBaseObject.append(newBaseObject)
+        //MainARViewController.arrayOfBaseObject.append(newBaseObject)
         
+        vcDelegate?.changeMaxStepper(object: newBaseObject)
         
         self.isHidden = true
     }
@@ -106,4 +108,8 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
         self.isHidden = true
     }
     
+}
+
+protocol CreateObjectDelegate {
+    func changeMaxStepper(object: BaseObjectLibrary)
 }
