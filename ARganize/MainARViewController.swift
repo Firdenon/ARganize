@@ -14,7 +14,9 @@ import CoreData
 
 class MainARViewController: UIViewController, ARSCNViewDelegate{
     
+    
     var listNode = [SCNNode]()
+    static var arrayOfBaseObject = [BaseObjectLibrary]()
     
     var flag = true
     
@@ -94,25 +96,32 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
                 
                 if let hitResult = result.first {
                     
-                    let node = SCNNode()
-                    node.position = SCNVector3(
-                        hitResult.worldTransform.columns.3.x,
-                        hitResult.worldTransform.columns.3.y,
-                        hitResult.worldTransform.columns.3.z)
-                    
-                    let box = SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0.02)
-                    let material = SCNMaterial()
-                    material.diffuse.contents = UIColor.red.withAlphaComponent(0.7)
-                    box.materials = [material]
-                    
-                    node.geometry = box
-                    
-                    listNode.append(node)
-                    
-                    sceneView.scene.rootNode.addChildNode(node)
-                    objectStepper.maximumValue = Double(listNode.count)
-                    countLabel.text = String(objectStepper.value)
-                    
+//                    let node = SCNNode()
+//                    node.position = SCNVector3(
+//                        hitResult.worldTransform.columns.3.x,
+//                        hitResult.worldTransform.columns.3.y,
+//                        hitResult.worldTransform.columns.3.z)
+//
+//                    let box = SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0.02)
+//                    let material = SCNMaterial()
+//                    material.diffuse.contents = UIColor.red.withAlphaComponent(0.7)
+//                    box.materials = [material]
+//
+//                    node.geometry = box
+//
+//                    listNode.append(node)
+//
+//                    sceneView.scene.rootNode.addChildNode(node)
+//                    objectStepper.maximumValue = Double(listNode.count)
+//                    countLabel.text = String(objectStepper.value)
+                    if MainARViewController.arrayOfBaseObject.isEmpty == true{
+                        print("datakosong")
+                        //bikin alert item kosong
+                    }
+                    else{
+                        print(MainARViewController.arrayOfBaseObject[0].nama)
+                        
+                    }
                     //Core Data
                     //let listObject = Object(context: PersistanceService.context)
                     //conversi node dan box ke Binary Data
@@ -187,5 +196,7 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
     @IBAction func createObjectBtn(_ sender: Any) {
         createObjectView.isHidden = false
     }
+    
+    
     
 }

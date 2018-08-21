@@ -16,7 +16,7 @@
 		5A55F377212447FD00BE8B67 /* InfoPage1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F375212447FD00BE8B67 /* InfoPage1.xib */; };
 		5A55F37E2124483200BE8B67 /* InfoPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F37C2124483200BE8B67 /* InfoPage3.swift */; };
 		5A55F37F2124483200BE8B67 /* InfoPage3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F37D2124483200BE8B67 /* InfoPage3.xib */; };
-		5A55F3812125599000BE8B67 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F3802125599000BE8B67 /* BaseObject.swift */; };
+		5A55F3812125599000BE8B67 /* BaseObjectLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F3802125599000BE8B67 /* BaseObjectLibrary.swift */; };
 		5A55F3892125787700BE8B67 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F3882125787700BE8B67 /* PersistanceService.swift */; };
 		5AF36097212BBFF800DDB213 /* SBCardPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF36096212BBFF800DDB213 /* SBCardPopupViewController.swift */; };
 		E0738A682122E93800973C37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0738A672122E93800973C37 /* AppDelegate.swift */; };
@@ -38,7 +38,7 @@
 		5A55F375212447FD00BE8B67 /* InfoPage1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPage1.xib; sourceTree = "<group>"; };
 		5A55F37C2124483200BE8B67 /* InfoPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPage3.swift; sourceTree = "<group>"; };
 		5A55F37D2124483200BE8B67 /* InfoPage3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPage3.xib; sourceTree = "<group>"; };
-		5A55F3802125599000BE8B67 /* BaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseObject.swift; path = ARganize/Controller/BaseObject.swift; sourceTree = SOURCE_ROOT; };
+		5A55F3802125599000BE8B67 /* BaseObjectLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseObjectLibrary.swift; path = ARganize/Controller/BaseObjectLibrary.swift; sourceTree = SOURCE_ROOT; };
 		5A55F3882125787700BE8B67 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		5AF36096212BBFF800DDB213 /* SBCardPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCardPopupViewController.swift; sourceTree = "<group>"; };
 		E0738A642122E93800973C37 /* ARganize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARganize.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +66,7 @@
 		5A60460A2123D92C00A93EAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5A55F3802125599000BE8B67 /* BaseObject.swift */,
+				5A55F3802125599000BE8B67 /* BaseObjectLibrary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A55F3892125787700BE8B67 /* PersistanceService.swift in Sources */,
-				5A55F3812125599000BE8B67 /* BaseObject.swift in Sources */,
+				5A55F3812125599000BE8B67 /* BaseObjectLibrary.swift in Sources */,
 				E0D03D7021242AF20003DE06 /* MainARViewController.swift in Sources */,
 				E0738A702122E93800973C37 /* ARganize.xcdatamodeld in Sources */,
 				5AF36097212BBFF800DDB213 /* SBCardPopupViewController.swift in Sources */,

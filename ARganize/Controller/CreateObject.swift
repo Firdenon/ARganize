@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SceneKit
 
 class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
     
@@ -32,6 +33,7 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
         addSubview(view)
         view.frame = self.bounds
         
+        
         widthDepan.delegate = self
         lengthDepan.delegate = self
         heightDepan.delegate = self
@@ -54,29 +56,49 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         //var countRow:Int = angkaBelakang.count
-        return 5
-//        if pickerView.tag == 1{
-//            return angkaDepan.count
-//        }else{
-//            return angkaBelakang.count
-//        }
+        
+        if pickerView.tag == 1{
+            return angkaDepan.count
+        }else{
+            return angkaBelakang.count
+        }
         
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return angkaDepan[row]
-//        if pickerView.tag == 1{
-//
-//            return angkaDepan[row]
-//        }
-//        else {
-//            return angkaBelakang[row]
-//        }
+        //return angkaDepan[row]
+        if pickerView.tag == 1{
+
+            return angkaDepan[row]
+        }
+        else {
+            return angkaBelakang[row]
+        }
     }
     
     
     @IBAction func createButton(_ sender: Any) {
+        let width:String = "\(widthDepan.selectedRow(inComponent: 0)).\(widthBelakang.selectedRow(inComponent: 0))"
+        let length:String = "\(lengthDepan.selectedRow(inComponent: 0)).\(lengthBelakang.selectedRow(inComponent: 0))"
+        let height:String = "\(heightDepan.selectedRow(inComponent: 0)).\(heightBelakang.selectedRow(inComponent: 0))"
         
+        let floatWidth = (width as NSString).floatValue
+        let floatLength = (length as NSString).floatValue
+        let floatHeight = (height as NSString).floatValue
+        
+        let node = SCNNode()
+        let box = SCNBox(width: CGFloat(floatWidth), height: CGFloat(floatHeight), length: CGFloat(floatLength), chamferRadius: 0.02)
+        let material = SCNMaterial()
+        material.diffuse.contents = UIColor.red.withAlphaComponent(0.7)
+        box.materials = [material]
+        
+        node.geometry = box
+        
+        let newBaseObject = BaseObjectLibrary(node: node, box: box, nama: "Yattazo!")
+        
+        MainARViewController.arrayOfBaseObject.append(newBaseObject)
+        
+        self.isHidden = true
     }
     
     @IBAction func cancelButton(_ sender: Any) {
