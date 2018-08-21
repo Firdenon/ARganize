@@ -11,13 +11,21 @@ import ARKit
 import UIKit
 import SceneKit
 
-class BaseObjectLibrary{
+class BaseObjectLibrary {
+    
+    
     //NSOBject (ARKIT) -> panjang lebar tinggi
     var node = SCNNode() //Lokasi
     var box = SCNBox() //panjang lebar tinggi warna
     var nama:String = ""
     var flagScreenAppear:Bool = false
     
+    enum Key:String {
+        case node = "node"
+        case box = "box"
+        case nama = "nama"
+        case flagScreenAppear = "flagScreenAppear"
+    }
     
     init(node:SCNNode,box:SCNBox,nama:String){
         self.node = node
@@ -25,6 +33,9 @@ class BaseObjectLibrary{
         self.nama = nama
         self.flagScreenAppear = false
     }
+    
+    
+    
     
     func refresh(){
         node.geometry = box

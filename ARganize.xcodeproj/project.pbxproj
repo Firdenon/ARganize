@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5A4E94BD21258A88001A6929 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E94BC21258A88001A6929 /* SplashScreenViewController.swift */; };
+		5A4E94BF212A7C03001A6929 /* InfoPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4E94BE212A7C03001A6929 /* InfoPageViewController.xib */; };
+		5A4E94C3212AB4B3001A6929 /* CreateObject.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4E94C2212AB4B3001A6929 /* CreateObject.xib */; };
+		5A4E94C5212AB53B001A6929 /* CreateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E94C4212AB53B001A6929 /* CreateObject.swift */; };
 		5A55F36C2123E12700BE8B67 /* InfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F36A2123E12700BE8B67 /* InfoPageViewController.swift */; };
-		5A55F36D2123E12700BE8B67 /* InfoPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F36B2123E12700BE8B67 /* InfoPageViewController.xib */; };
 		5A55F376212447FD00BE8B67 /* InfoPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F374212447FD00BE8B67 /* InfoPage1.swift */; };
 		5A55F377212447FD00BE8B67 /* InfoPage1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F375212447FD00BE8B67 /* InfoPage1.xib */; };
 		5A55F37A2124481C00BE8B67 /* InfoPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F3782124481C00BE8B67 /* InfoPage2.swift */; };
@@ -18,12 +20,11 @@
 		5A55F37F2124483200BE8B67 /* InfoPage3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55F37D2124483200BE8B67 /* InfoPage3.xib */; };
 		5A55F3812125599000BE8B67 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F3802125599000BE8B67 /* BaseObject.swift */; };
 		5A55F3892125787700BE8B67 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55F3882125787700BE8B67 /* PersistanceService.swift */; };
+		5AF36097212BBFF800DDB213 /* SBCardPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF36096212BBFF800DDB213 /* SBCardPopupViewController.swift */; };
 		E0738A682122E93800973C37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0738A672122E93800973C37 /* AppDelegate.swift */; };
 		E0738A702122E93800973C37 /* ARganize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0738A6E2122E93800973C37 /* ARganize.xcdatamodeld */; };
 		E0738A722122E93900973C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0738A712122E93900973C37 /* Assets.xcassets */; };
 		E0738A752122E93900973C37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0738A732122E93900973C37 /* LaunchScreen.storyboard */; };
-		E0738A7E2122E95500973C37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0738A7C2122E95500973C37 /* MainViewController.swift */; };
-		E0738A7F2122E95500973C37 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0738A7D2122E95500973C37 /* MainViewController.xib */; };
 		E0D03D7021242AF20003DE06 /* MainARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D03D6E21242AF20003DE06 /* MainARViewController.swift */; };
 		E0D03D7121242AF20003DE06 /* MainARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D03D6F21242AF20003DE06 /* MainARViewController.xib */; };
 		E0D03D73212430320003DE06 /* ARassets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D03D72212430320003DE06 /* ARassets.scnassets */; };
@@ -31,8 +32,10 @@
 
 /* Begin PBXFileReference section */
 		5A4E94BC21258A88001A6929 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		5A4E94BE212A7C03001A6929 /* InfoPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoPageViewController.xib; sourceTree = "<group>"; };
+		5A4E94C2212AB4B3001A6929 /* CreateObject.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateObject.xib; sourceTree = "<group>"; };
+		5A4E94C4212AB53B001A6929 /* CreateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateObject.swift; sourceTree = "<group>"; };
 		5A55F36A2123E12700BE8B67 /* InfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageViewController.swift; sourceTree = "<group>"; };
-		5A55F36B2123E12700BE8B67 /* InfoPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPageViewController.xib; sourceTree = "<group>"; };
 		5A55F374212447FD00BE8B67 /* InfoPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPage1.swift; sourceTree = "<group>"; };
 		5A55F375212447FD00BE8B67 /* InfoPage1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPage1.xib; sourceTree = "<group>"; };
 		5A55F3782124481C00BE8B67 /* InfoPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPage2.swift; sourceTree = "<group>"; };
@@ -41,14 +44,13 @@
 		5A55F37D2124483200BE8B67 /* InfoPage3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPage3.xib; sourceTree = "<group>"; };
 		5A55F3802125599000BE8B67 /* BaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseObject.swift; path = ARganize/Controller/BaseObject.swift; sourceTree = SOURCE_ROOT; };
 		5A55F3882125787700BE8B67 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
+		5AF36096212BBFF800DDB213 /* SBCardPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCardPopupViewController.swift; sourceTree = "<group>"; };
 		E0738A642122E93800973C37 /* ARganize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARganize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0738A672122E93800973C37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0738A6F2122E93800973C37 /* ARganize.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ARganize.xcdatamodel; sourceTree = "<group>"; };
 		E0738A712122E93900973C37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0738A742122E93900973C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0738A762122E93900973C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0738A7C2122E95500973C37 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		E0738A7D2122E95500973C37 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		E0D03D6E21242AF20003DE06 /* MainARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainARViewController.swift; path = ARganize/MainARViewController.swift; sourceTree = SOURCE_ROOT; };
 		E0D03D6F21242AF20003DE06 /* MainARViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainARViewController.xib; path = ARganize/View/MainARViewController.xib; sourceTree = SOURCE_ROOT; };
 		E0D03D72212430320003DE06 /* ARassets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ARassets.scnassets; sourceTree = "<group>"; };
@@ -79,9 +81,9 @@
 				5A55F375212447FD00BE8B67 /* InfoPage1.xib */,
 				5A55F3792124481C00BE8B67 /* InfoPage2.xib */,
 				5A55F37D2124483200BE8B67 /* InfoPage3.xib */,
+				5A4E94BE212A7C03001A6929 /* InfoPageViewController.xib */,
+				5A4E94C2212AB4B3001A6929 /* CreateObject.xib */,
 				E0D03D6F21242AF20003DE06 /* MainARViewController.xib */,
-				E0738A7D2122E95500973C37 /* MainViewController.xib */,
-				5A55F36B2123E12700BE8B67 /* InfoPageViewController.xib */,
 				E0738A732122E93900973C37 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -93,10 +95,11 @@
 				5A55F374212447FD00BE8B67 /* InfoPage1.swift */,
 				5A55F3782124481C00BE8B67 /* InfoPage2.swift */,
 				5A55F37C2124483200BE8B67 /* InfoPage3.swift */,
-				E0738A7C2122E95500973C37 /* MainViewController.swift */,
+				5A4E94C4212AB53B001A6929 /* CreateObject.swift */,
 				5A55F36A2123E12700BE8B67 /* InfoPageViewController.swift */,
 				E0D03D6E21242AF20003DE06 /* MainARViewController.swift */,
 				5A4E94BC21258A88001A6929 /* SplashScreenViewController.swift */,
+				5AF36096212BBFF800DDB213 /* SBCardPopupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,15 +194,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4E94C3212AB4B3001A6929 /* CreateObject.xib in Resources */,
 				E0D03D7121242AF20003DE06 /* MainARViewController.xib in Resources */,
 				5A55F37F2124483200BE8B67 /* InfoPage3.xib in Resources */,
 				5A55F37B2124481C00BE8B67 /* InfoPage2.xib in Resources */,
 				5A55F377212447FD00BE8B67 /* InfoPage1.xib in Resources */,
+				5A4E94BF212A7C03001A6929 /* InfoPageViewController.xib in Resources */,
 				E0D03D73212430320003DE06 /* ARassets.scnassets in Resources */,
 				E0738A752122E93900973C37 /* LaunchScreen.storyboard in Resources */,
-				E0738A7F2122E95500973C37 /* MainViewController.xib in Resources */,
 				E0738A722122E93900973C37 /* Assets.xcassets in Resources */,
-				5A55F36D2123E12700BE8B67 /* InfoPageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,17 +213,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0738A7E2122E95500973C37 /* MainViewController.swift in Sources */,
 				5A55F3892125787700BE8B67 /* PersistanceService.swift in Sources */,
 				5A55F3812125599000BE8B67 /* BaseObject.swift in Sources */,
 				E0D03D7021242AF20003DE06 /* MainARViewController.swift in Sources */,
 				E0738A702122E93800973C37 /* ARganize.xcdatamodeld in Sources */,
+				5AF36097212BBFF800DDB213 /* SBCardPopupViewController.swift in Sources */,
 				5A4E94BD21258A88001A6929 /* SplashScreenViewController.swift in Sources */,
 				E0738A682122E93800973C37 /* AppDelegate.swift in Sources */,
 				5A55F376212447FD00BE8B67 /* InfoPage1.swift in Sources */,
 				5A55F37A2124481C00BE8B67 /* InfoPage2.swift in Sources */,
 				5A55F37E2124483200BE8B67 /* InfoPage3.swift in Sources */,
 				5A55F36C2123E12700BE8B67 /* InfoPageViewController.swift in Sources */,
+				5A4E94C5212AB53B001A6929 /* CreateObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

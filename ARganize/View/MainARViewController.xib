@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainARViewController" customModule="ARganize" customModuleProvider="target">
             <connections>
                 <outlet property="countLabel" destination="01P-KY-WVc" id="pu6-YG-KDt"/>
+                <outlet property="createObjectView" destination="c4O-Cg-eDc" id="CXU-PS-Poo"/>
                 <outlet property="flagButton" destination="eGP-jQ-fdB" id="ebK-sn-nea"/>
                 <outlet property="flagLabel" destination="caR-Zi-q3p" id="L3T-JB-RAN"/>
                 <outlet property="objectStepper" destination="Cej-RM-lL4" id="Qve-6O-Vdq"/>
@@ -63,7 +64,15 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="SAVE"/>
+                    <connections>
+                        <action selector="createObjectBtn:" destination="-1" eventType="touchUpInside" id="mg6-43-C42"/>
+                    </connections>
                 </button>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4O-Cg-eDc" customClass="CreateObject" customModule="ARganize" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="271" width="375" height="541"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

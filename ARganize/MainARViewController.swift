@@ -13,7 +13,7 @@ import CoreData
 
 
 class MainARViewController: UIViewController, ARSCNViewDelegate{
-
+    
     var listNode = [SCNNode]()
     
     var flag = true
@@ -23,6 +23,8 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
     @IBOutlet weak var flagButton: UIButton!
     @IBOutlet weak var objectStepper: UIStepper!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var createObjectView: CreateObject!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,8 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
         objectStepper.isHidden = true
         objectStepper.maximumValue = Double(listNode.count)
         countLabel.text = String(objectStepper.value)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +49,9 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
         
         //run the view's session
         sceneView.session.run(configuration)
+        
+        
+        //okcreateObjectView.widthLbl.text = "Iseng"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -105,10 +112,12 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
                     sceneView.scene.rootNode.addChildNode(node)
                     objectStepper.maximumValue = Double(listNode.count)
                     countLabel.text = String(objectStepper.value)
-                    let listObject = Object(context: PersistanceService.context)
+                    
+                    //Core Data
+                    //let listObject = Object(context: PersistanceService.context)
                     //conversi node dan box ke Binary Data
                     //let convertNode = node as NSData?
-                    listObject.nama = "box\(listNode.count+1)"
+                    //listObject.nama = "box\(listNode.count+1)"
                     //Save Object ke CoreData
                     //PersistanceService.saveContext()
                     
@@ -150,4 +159,9 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
             objectStepper.isHidden = true
         }
     }
+    
+    @IBAction func createObjectBtn(_ sender: Any) {
+        createObjectView.isHidden = false
+    }
+    
 }
