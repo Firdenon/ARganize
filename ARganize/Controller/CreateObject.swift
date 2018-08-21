@@ -98,6 +98,7 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
         
         MainARViewController.arrayOfBaseObject.append(newBaseObject)
         
+        
         self.isHidden = true
     }
     

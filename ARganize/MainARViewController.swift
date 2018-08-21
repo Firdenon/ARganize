@@ -12,10 +12,10 @@ import ARKit
 import CoreData
 
 
-class MainARViewController: UIViewController, ARSCNViewDelegate{
+class MainARViewController: UIViewController, ARSCNViewDelegate {
     
     
-    var listNode = [SCNNode]()
+    //var listNode = [SCNNode]()
     static var arrayOfBaseObject = [BaseObjectLibrary]()
     
     var flag = true
@@ -31,15 +31,13 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
-        
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
         flagLabel.text = "Place Mode"
-        objectStepper.isHidden = true
-        objectStepper.maximumValue = Double(listNode.count)
-        countLabel.text = String(objectStepper.value)
         
+        //objectStepper.isHidden = true
         
+        countLabel.text = String(Int(objectStepper.value))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +49,6 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
         
         //run the view's session
         sceneView.session.run(configuration)
-        
         
         //okcreateObjectView.widthLbl.text = "Iseng"
     }
@@ -114,13 +111,19 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
 //                    sceneView.scene.rootNode.addChildNode(node)
 //                    objectStepper.maximumValue = Double(listNode.count)
 //                    countLabel.text = String(objectStepper.value)
-                    if MainARViewController.arrayOfBaseObject.isEmpty == true{
+                    
+                    
+                    if MainARViewController.arrayOfBaseObject.isEmpty == true {
                         print("datakosong")
                         //bikin alert item kosong
                     }
-                    else{
-                        print(MainARViewController.arrayOfBaseObject[0].nama)
-                        
+                    else {
+                        MainARViewController.arrayOfBaseObject[Int(objectStepper.value)].node.position = SCNVector3(
+                            hitResult.worldTransform.columns.3.x,
+                            hitResult.worldTransform.columns.3.y,
+                            hitResult.worldTransform.columns.3.z)
+                        sceneView.scene.rootNode.addChildNode(MainARViewController.arrayOfBaseObject[Int(objectStepper.value)].node)
+                        print(MainARViewController.arrayOfBaseObject[Int(objectStepper.value)].nama)
                     }
                     //Core Data
                     //let listObject = Object(context: PersistanceService.context)
@@ -150,7 +153,7 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
             let newPosition = SCNVector3(worldTransform.columns.3.x, worldTransform.columns.3.y, worldTransform.columns.3.z)
 
             //apply To The Node
-            listNode[Int(objectStepper.value)].position = newPosition
+            MainARViewController.arrayOfBaseObject[Int(objectStepper.value)].node.position = newPosition
             //print(objectStepper.value)
         }
     }
@@ -161,21 +164,21 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
             
             print("muter jalan")
             
-            var currentAngleY = listNode[Int(objectStepper.value)].eulerAngles.y
-            
-            //1. Get The Current Rotation From The Gesture
-            let rotation = Float(sender.rotation)
-            
-            //2. If The Gesture State Has Changed Set The Nodes EulerAngles.y
-            if sender.state == .changed{
-                
-                listNode[Int(objectStepper.value)].eulerAngles.y = currentAngleY + rotation
-            }
-            
-            //3. If The Gesture Has Ended Store The Last Angle Of The Cube
-            if(sender.state == .ended) {
-                currentAngleY = listNode[Int(objectStepper.value)].eulerAngles.y
-            }
+//            var currentAngleY = listNode[Int(objectStepper.value)].eulerAngles.y
+//
+//            //1. Get The Current Rotation From The Gesture
+//            let rotation = Float(sender.rotation)
+//
+//            //2. If The Gesture State Has Changed Set The Nodes EulerAngles.y
+//            if sender.state == .changed{
+//
+//                listNode[Int(objectStepper.value)].eulerAngles.y = currentAngleY + rotation
+//            }
+//
+//            //3. If The Gesture Has Ended Store The Last Angle Of The Cube
+//            if(sender.state == .ended) {
+//                currentAngleY = listNode[Int(objectStepper.value)].eulerAngles.y
+//            }
         }
     }
     
@@ -184,12 +187,12 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
             flag = false
             flagLabel.text = "Edit Mode"
             flagButton.setTitle("Place", for: .normal)
-            objectStepper.isHidden = false
+            //objectStepper.isHidden = false
         }else {
             flag = true
             flagLabel.text = "Place Mode"
             flagButton.setTitle("Edit", for: .normal)
-            objectStepper.isHidden = true
+            //objectStepper.isHidden = true
         }
     }
     
@@ -198,5 +201,8 @@ class MainARViewController: UIViewController, ARSCNViewDelegate{
     }
     
     
+    @IBAction func stepperChanged(_ sender: UIStepper) {
+        countLabel.text = Int(sender.value).description
+    }
     
 }
