@@ -12,6 +12,7 @@ import SceneKit
 class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
     
     
+    @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var widthDepan: UIPickerView!
     @IBOutlet weak var widthBelakang: UIPickerView!
@@ -19,9 +20,11 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
     @IBOutlet weak var lengthBelakang: UIPickerView!
     @IBOutlet weak var heightDepan: UIPickerView!
     @IBOutlet weak var heightBelakang: UIPickerView!
+    @IBOutlet weak var warnaPicker: UIPickerView!
     
     var angkaDepan:[String] = ["0","1","2","3","4","5"]
     var angkaBelakang:[String] = ["0","1","2","3","4","5","6","7","8","9"]
+    var warna:[String] = ["Black","White","Red","Blue","Green","Yellow","Brown","Orange"]
     
     @IBOutlet var view: UIView!
     
@@ -59,7 +62,9 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
         
         if pickerView.tag == 1{
             return angkaDepan.count
-        }else{
+        }
+        
+        else{
             return angkaBelakang.count
         }
         
@@ -71,6 +76,9 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
 
             return angkaDepan[row]
         }
+        else if pickerView.tag == 3{
+            return warna[row]
+        }
         else {
             return angkaBelakang[row]
         }
@@ -78,6 +86,7 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
     
     
     @IBAction func createButton(_ sender: Any) {
+        let name:String = nameTextField.text!
         let width:String = "\(widthDepan.selectedRow(inComponent: 0)).\(widthBelakang.selectedRow(inComponent: 0))"
         let length:String = "\(lengthDepan.selectedRow(inComponent: 0)).\(lengthBelakang.selectedRow(inComponent: 0))"
         let height:String = "\(heightDepan.selectedRow(inComponent: 0)).\(heightBelakang.selectedRow(inComponent: 0))"
@@ -94,7 +103,7 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
         
         node.geometry = box
         
-        let newBaseObject = BaseObjectLibrary(node: node, box: box, nama: "Yattazo!")
+        let newBaseObject = BaseObjectLibrary(node: node, box: box, nama: name)
         
         MainARViewController.arrayOfBaseObject.append(newBaseObject)
         
