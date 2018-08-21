@@ -12,11 +12,12 @@ import ARKit
 import CoreData
 
 
-class MainARViewController: UIViewController, ARSCNViewDelegate {
+class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDelegate {
+    
     
     
     //var listNode = [SCNNode]()
-    static var arrayOfBaseObject = [BaseObjectLibrary]()
+    var arrayOfBaseObject = [BaseObjectLibrary]()
     
     var flag = true
     
@@ -34,8 +35,10 @@ class MainARViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
         flagLabel.text = "Place Mode"
-        
         //objectStepper.isHidden = true
+        
+        createObjectView.vcDelegate = self
+        objectStepper.maximumValue = 0
         
         countLabel.text = String(Int(objectStepper.value))
     }
@@ -113,17 +116,17 @@ class MainARViewController: UIViewController, ARSCNViewDelegate {
 //                    countLabel.text = String(objectStepper.value)
                     
                     
-                    if MainARViewController.arrayOfBaseObject.isEmpty == true {
+                    if arrayOfBaseObject.isEmpty == true {
                         print("datakosong")
                         //bikin alert item kosong
                     }
                     else {
-                        MainARViewController.arrayOfBaseObject[Int(objectStepper.value)].node.position = SCNVector3(
+                        arrayOfBaseObject[Int(objectStepper.value)].node.position = SCNVector3(
                             hitResult.worldTransform.columns.3.x,
                             hitResult.worldTransform.columns.3.y,
                             hitResult.worldTransform.columns.3.z)
-                        sceneView.scene.rootNode.addChildNode(MainARViewController.arrayOfBaseObject[Int(objectStepper.value)].node)
-                        print(MainARViewController.arrayOfBaseObject[Int(objectStepper.value)].nama)
+                        sceneView.scene.rootNode.addChildNode(arrayOfBaseObject[Int(objectStepper.value)].node)
+                        print(arrayOfBaseObject[Int(objectStepper.value)].nama)
                     }
                     //Core Data
                     //let listObject = Object(context: PersistanceService.context)
@@ -153,7 +156,7 @@ class MainARViewController: UIViewController, ARSCNViewDelegate {
             let newPosition = SCNVector3(worldTransform.columns.3.x, worldTransform.columns.3.y, worldTransform.columns.3.z)
 
             //apply To The Node
-            MainARViewController.arrayOfBaseObject[Int(objectStepper.value)].node.position = newPosition
+            arrayOfBaseObject[Int(objectStepper.value)].node.position = newPosition
             //print(objectStepper.value)
         }
     }
@@ -203,6 +206,11 @@ class MainARViewController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func stepperChanged(_ sender: UIStepper) {
         countLabel.text = Int(sender.value).description
+    }
+    
+    func changeMaxStepper(object: BaseObjectLibrary) {
+        arrayOfBaseObject.append(object)
+        objectStepper.maximumValue = Double(arrayOfBaseObject.count - 1)
     }
     
 }
