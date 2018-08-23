@@ -216,9 +216,15 @@ class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDel
     @IBAction func sukurinShotto(_ sender: Any) {
         let image = sceneView.snapshot()
         
-        
-        
         UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+        
+//        let alert = UIAlertController(title: "Screenshot Saved!", message: nil, preferredStyle: UIAlertController.Style.alert)
+//
+//        present(alert,animated:true,completion:nil)
+        let alertController = UIAlertController(title:"Screenshot Saved!",message:nil,preferredStyle:.alert)
+        self.present(alertController,animated:true,completion:{Timer.scheduledTimer(withTimeInterval: 0.5, repeats:false, block: {_ in
+            self.dismiss(animated: true, completion: nil)})})
+        
         
         
         }
