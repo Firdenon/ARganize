@@ -75,7 +75,7 @@ class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDel
             
             //adding material to plane anchor
             let gridMaterial = SCNMaterial()
-            gridMaterial.diffuse.contents = UIImage(named: "ARassets.scnassets/UMP45.(Girls.Frontline).full.2109431.jpg")
+            gridMaterial.diffuse.contents = UIImage(named: "ARassets.scnassets/grid.png")
             plane.materials = [gridMaterial]
             planeNode.geometry = plane
             
