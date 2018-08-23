@@ -10,13 +10,25 @@ import UIKit
 
 class InfoPage3: UIViewController {
 
+    
+    @IBOutlet weak var tekok: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+       
     }
-
-
+    @IBAction func getStartedBtn(_ sender: Any) {
+        let vc = MainARViewController()
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

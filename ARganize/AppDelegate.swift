@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        Thread.sleep(forTimeInterval: 3.0)
+        Thread.sleep(forTimeInterval: 2.0)
         // Override point for customization after application launch.
         window = UIWindow.init(frame: UIScreen.main.bounds)
         
@@ -26,15 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Allocate memory for an instance of the 'MainViewController' class
         //let mainViewController = MainViewController()
-        let arViewController = MainARViewController()
-        //let pageViewController = InfoPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        //let arViewController = MainARViewController()
+        let pageViewController = InfoPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
         
         //InfoPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
         
         //Set the root view controller of the app's window
         //window!.rootViewController = mainViewController
-        window!.rootViewController = arViewController
-        //window!.rootViewController = pageViewController
+        //window!.rootViewController = arViewController
+        window!.rootViewController = pageViewController
         
         // Make the window visible
         window!.makeKeyAndVisible()
