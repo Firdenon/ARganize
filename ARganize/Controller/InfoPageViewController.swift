@@ -10,14 +10,17 @@ import UIKit
 
 class InfoPageViewController: UIPageViewController,UIPageViewControllerDataSource,UIPageViewControllerDelegate {
 
+    
+    
     let pageContentViewControllers = [
-        UIViewController(nibName: "InfoPage1", bundle: nil),
-        UIViewController(nibName: "InfoPage3", bundle: nil)
+        InfoPage1(),
+        InfoPage3()
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
+        
         self.setViewControllers([pageContentViewControllers.first!], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
         
 //        InfoPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)

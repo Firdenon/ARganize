@@ -213,4 +213,17 @@ class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDel
         objectStepper.maximumValue = Double(arrayOfBaseObject.count - 1)
     }
     
+    @IBAction func sukurinShotto(_ sender: Any) {
+        let image = sceneView.snapshot()
+        
+        
+        
+        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+        
+        
+        }
 }
+    
+    
+
+
