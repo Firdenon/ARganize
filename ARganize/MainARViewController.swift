@@ -155,9 +155,10 @@ class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDel
             //set The New Position
             let newPosition = SCNVector3(worldTransform.columns.3.x, worldTransform.columns.3.y, worldTransform.columns.3.z)
 
-            //apply To The Node
-            arrayOfBaseObject[Int(objectStepper.value)].node.position = newPosition
-            //print(objectStepper.value)
+             //apply To The Node
+            if arrayOfBaseObject.isEmpty == true { return } else {
+                arrayOfBaseObject[Int(objectStepper.value)].node.position = newPosition
+            }
         }
     }
     
