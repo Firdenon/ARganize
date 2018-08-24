@@ -12,15 +12,18 @@ import ARKit
 import CoreData
 
 
-class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDelegate {
+class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     
     
     //var listNode = [SCNNode]()
     var arrayOfBaseObject = [BaseObjectLibrary]()
+    var arrayOfImage = [BaseObjectImage]()
     
+    let imagePicker = UIImagePickerController()
     var flag = true
     
+    @IBOutlet weak var selectedImageView: UIImageView!
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var flagLabel: UILabel!
     @IBOutlet weak var flagButton: UIButton!
@@ -41,6 +44,8 @@ class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDel
         objectStepper.maximumValue = 0
         
         countLabel.text = String(Int(objectStepper.value))
+        
+        imagePicker.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +53,7 @@ class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDel
         
         //create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
+        configuration.planeDetection = .vertical
         
         //run the view's session
         sceneView.session.run(configuration)
@@ -116,17 +121,17 @@ class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDel
 //                    countLabel.text = String(objectStepper.value)
                     
                     
-                    if arrayOfBaseObject.isEmpty == true {
+                    if arrayOfImage.isEmpty == true {
                         print("datakosong")
                         //bikin alert item kosong
                     }
                     else {
-                        arrayOfBaseObject[Int(objectStepper.value)].node.position = SCNVector3(
+                        arrayOfImage[Int(objectStepper.value)].node.position = SCNVector3(
                             hitResult.worldTransform.columns.3.x,
                             hitResult.worldTransform.columns.3.y,
                             hitResult.worldTransform.columns.3.z)
-                        sceneView.scene.rootNode.addChildNode(arrayOfBaseObject[Int(objectStepper.value)].node)
-                        print(arrayOfBaseObject[Int(objectStepper.value)].nama)
+                        sceneView.scene.rootNode.addChildNode(arrayOfImage[Int(objectStepper.value)].node)
+                        print(arrayOfImage[Int(objectStepper.value)].nama)
                     }
                     //Core Data
                     //let listObject = Object(context: PersistanceService.context)
@@ -201,9 +206,43 @@ class MainARViewController: UIViewController, ARSCNViewDelegate, CreateObjectDel
     }
     
     @IBAction func createObjectBtn(_ sender: Any) {
-        createObjectView.isHidden = false
+        //createObjectView.isHidden = false
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        imagePicker.allowsEditing = false
+        self.present(imagePicker, animated: true, completion: nil)
+  
     }
     
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        guard let image = info[UIImagePickerController.InfoKey.originalImage]  as? UIImage else {
+            return
+        }
+        selectedImageView.image = image
+        
+        dismiss(animated:true, completion: nil)
+        
+        let imageWidth = image.size.width / 1000
+        let imageHeight = image.size.height / 1000
+        print("Size Gambar : \(imageWidth),\(imageHeight)")
+        let node = SCNNode()
+        let plane = SCNPlane(width: imageWidth, height: imageHeight)
+        let material = SCNMaterial()
+        material.diffuse.contents = image
+        plane.materials = [material]
+        node.geometry = plane
+        
+        let newBaseImage = BaseObjectImage(image: image, nama: "Gambar", node: node, plane: plane)
+        arrayOfImage.append(newBaseImage)
+        objectStepper.maximumValue = Double(arrayOfImage.count - 1)
+    }
+    
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func stepperChanged(_ sender: UIStepper) {
         countLabel.text = Int(sender.value).description

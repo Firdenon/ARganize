@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A31BDA92130333E008C5A4A /* BaseObjectImag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31BDA82130333E008C5A4A /* BaseObjectImag.swift */; };
 		5A4E94BD21258A88001A6929 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E94BC21258A88001A6929 /* SplashScreenViewController.swift */; };
 		5A4E94BF212A7C03001A6929 /* InfoPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4E94BE212A7C03001A6929 /* InfoPageViewController.xib */; };
 		5A4E94C3212AB4B3001A6929 /* CreateObject.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4E94C2212AB4B3001A6929 /* CreateObject.xib */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A31BDA82130333E008C5A4A /* BaseObjectImag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObjectImag.swift; sourceTree = "<group>"; };
 		5A4E94BC21258A88001A6929 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		5A4E94BE212A7C03001A6929 /* InfoPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoPageViewController.xib; sourceTree = "<group>"; };
 		5A4E94C2212AB4B3001A6929 /* CreateObject.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateObject.xib; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				5A55F3802125599000BE8B67 /* BaseObjectLibrary.swift */,
+				5A31BDA82130333E008C5A4A /* BaseObjectImag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				5A55F3892125787700BE8B67 /* PersistanceService.swift in Sources */,
 				5A55F3812125599000BE8B67 /* BaseObjectLibrary.swift in Sources */,
 				E0D03D7021242AF20003DE06 /* MainARViewController.swift in Sources */,
+				5A31BDA92130333E008C5A4A /* BaseObjectImag.swift in Sources */,
 				E0738A702122E93800973C37 /* ARganize.xcdatamodeld in Sources */,
 				5AF36097212BBFF800DDB213 /* SBCardPopupViewController.swift in Sources */,
 				5A4E94BD21258A88001A6929 /* SplashScreenViewController.swift in Sources */,
@@ -355,7 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BW6L62Q584;
+				DEVELOPMENT_TEAM = 6HRQPZU9P7;
 				INFOPLIST_FILE = ARganize/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,7 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BW6L62Q584;
+				DEVELOPMENT_TEAM = 6HRQPZU9P7;
 				INFOPLIST_FILE = ARganize/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

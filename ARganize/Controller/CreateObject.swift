@@ -9,8 +9,9 @@
 import UIKit
 import SceneKit
 
-class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
+class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
+    let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -37,6 +38,7 @@ class CreateObject: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
         addSubview(view)
         view.frame = self.bounds
         
+        imagePicker.delegate = self
         
         widthDepan.delegate = self
         lengthDepan.delegate = self
